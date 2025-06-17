@@ -1,0 +1,160 @@
+body {
+  background: #0a0a0a;
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-wrapper {
+  position: relative;
+  display: inline-block; /* shrink to fit the card */
+}
+
+.glass-card {
+  background: #1e1e1e;
+  border: 1px solid #8f00ff;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  width: 500px;
+  max-width: 90%;
+  overflow: hidden;
+}
+/* Corner accents outside the card */
+.corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #8f00ff;
+}
+
+.top-left {
+  top: -4px;
+  left: -4px;
+}
+
+.top-right {
+  top: -4px;
+  right: -4px;
+}
+
+.bottom-left {
+  bottom: -4px;
+  left: -4px;
+}
+
+.bottom-right {
+  bottom: -4px;
+  right: -4px;
+}
+
+.format-selectors {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.format-box {
+  background: #f3f4f6;
+  color: #111;
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.format-box span {
+  font-weight: bold;
+}
+
+.format-box select {
+  background: transparent;
+  border: none;
+  color: #6957d4;
+  font-weight: bold;
+  cursor: pointer;
+  appearance: none; /* remove default arrow */
+  -webkit-appearance: none;
+}
+
+.format-box select:focus {
+  outline: none;
+}
+
+.upload-box {
+  border: 2px dashed #8f00ff;
+  border-radius: 10px;
+  padding: 40px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.upload-label {
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  background: #8f00ff;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.file-list {
+  margin-top: 10px;
+  text-align: left;
+  max-height: 400px; /* adjust for taste */
+  overflow-y: auto;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.file-item img {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.file-item button {
+  margin-left: auto;
+  background: #8f00ff;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.file-item .remove {
+  background: transparent;
+  color: #ff4c4c;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#hostOutput {
+  margin-top: 20px;
+}

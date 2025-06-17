@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Convertio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <div class="card-wrapper">
+  <div class="corner top-left"></div>
+  <div class="corner top-right"></div>
+  <div class="corner bottom-left"></div>
+  <div class="corner bottom-right"></div>
+  <div class="glass-card">
+    <div class="format-selectors">
+  <div class="format-box">
+    <span>Convert:</span>
+    <select id="fromFormat">
+      <option value="webp">WEBP</option>
+      <option value="png">PNG</option>
+      <option value="jpeg">JPEG</option>
+    </select>
+  </div>
+  <div class="format-box">
+    <span>To:</span>
+    <select id="toFormat">
+      <option value="png">PNG</option>
+      <option value="webp">WEBP</option>
+      <option value="jpeg">JPEG</option>
+    </select>
+  </div>
+</div>
+
+    <div id="uploadBox" class="upload-box">
+      <label for="fileInput" class="upload-label">
+        <strong>Choose Files</strong><br />
+        or drop your images here
+      </label>
+      <input type="file" id="fileInput" multiple webkitdirectory directory hidden />
+    </div>
+
+    <div class="controls">
+      <button id="clearQueue" style="display:none;">Clear Queue</button>
+      <button id="startConversion" style="display:none;">Start Conversion</button>
+    </div>
+
+    <div id="fileList" class="file-list"></div>
+
+    <h2>Image Host</h2>
+    <input type="file" id="singleHostInput" />
+    <button onclick="uploadSingle()">Upload Image</button>
+    <div id="hostOutput"></div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
